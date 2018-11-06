@@ -1,10 +1,10 @@
 CREATE TABLE tables (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(64),
+  name VARCHAR(255),
   description TEXT,
-  location POINT,
-  address VARCHAR(100),
-  city VARCHAR(50),
+  location geography(POINT),
+  address VARCHAR(255),
+  city VARCHAR(255),
   state VARCHAR(50),
   zip VARCHAR(10), 
   phone VARCHAR(15)
