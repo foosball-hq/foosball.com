@@ -30,8 +30,8 @@ func init() {
 	}
 }
 
-func handle(ctx context.Context) error {
-	return foosball.CreateUser(db)
+func handle(ctx context.Context, request foosball.CreateUserRequest) (CreateUserResponse, error) {
+	return foosball.CreateUser(request, db)
 }
 
 func main() {
