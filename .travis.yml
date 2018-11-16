@@ -8,6 +8,6 @@ git:
 notifications:
   email: false
 
-before_script:
-  - cd api
+before_install:
   - go get -u golang.org/x/lint/golint
+  - cd api
