@@ -26,7 +26,7 @@ func init() {
 	var err error
 	db, err = internal.CreateDatabaseConnection(svc, internal.DatabaseConnectionOptions{})
 	if err != nil {
-		log.Fatalf("failed to connect database: %v", err)
+		log.Fatalf("unable to connect database: %v", err)
 	}
 }
 
