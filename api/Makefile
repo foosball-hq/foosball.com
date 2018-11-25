@@ -3,16 +3,13 @@ BIN ?= $(CURDIR)/bin
 GOOS ?= linux
 GOARCH ?= amd64
 
-export GO111MODULE=on
-
 .PHONY: all
 all: fmt lint test build
 
 .PHONY: build
-build: 
-	GOOS=$(GOOS) GOARCH=$(GOARCH) CGO_ENABLED=0 go build -ldflags="-s -w" -o $(BIN)/$(PROJECT) $(CURDIR)/cmd/user/create.go
-	chmod 755 $(BIN)/$(PROJECT)
-
+build:
+	./scripts/build.sh
+	
 .PHONY: test
 test:
 	go test $(CURDIR)/cmd/... $(CURDIR)/pkg/...
