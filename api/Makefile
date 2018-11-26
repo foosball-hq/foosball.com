@@ -12,7 +12,7 @@ build:
 	
 .PHONY: test
 test:
-	go test $(CURDIR)/cmd/... $(CURDIR)/foosball/...
+	go test $(CURDIR)/...
 
 .PHONY: lint
 lint:
