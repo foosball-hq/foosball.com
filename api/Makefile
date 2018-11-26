@@ -12,7 +12,7 @@ build:
 	
 .PHONY: test
 test:
-	go test $(CURDIR)/cmd/... $(CURDIR)/pkg/...
+	go test $(CURDIR)/cmd/... $(CURDIR)/foosball/...
 
 .PHONY: lint
 lint:
