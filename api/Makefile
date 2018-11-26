@@ -4,7 +4,7 @@ GOOS ?= linux
 GOARCH ?= amd64
 
 .PHONY: all
-all: fmt lint test build
+all: fmt lint build
 
 .PHONY: build
 build:
